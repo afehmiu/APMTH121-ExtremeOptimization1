@@ -1,0 +1,5 @@
+model eo1-5c.mod;
+data eo1-5c_small.dat;
+option solver './cplex'; # Using full version ampl-cplex
+solve;
+print {i in R}: {j in C} (sum {b in B} I[b, i, j] * X[b]) > eo1-5c_small.out;

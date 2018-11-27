@@ -1,0 +1,12 @@
+data;
+
+param N := 8;
+param M := 8;
+param A := 5;
+param d_c := 2;
+param d_t := 10;
+param w := 0.1;
+
+read {b in B, i in R, j in C} I[b,i,j] < smallexample/beam_raw.txt;
+read {i in R, j in C} Cr[i,j] < smallexample/critical_raw.txt;
+read {i in R, j in C} Tm[i,j] < smallexample/tumor_raw.txt;

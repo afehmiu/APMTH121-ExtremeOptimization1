@@ -1,0 +1,5 @@
+model eo1-3.mod;
+data eo1-3_small.dat;
+option solver './cplex'; # Using full version ampl-cplex
+solve;
+print {i in R}: {j in C} Q[i, j] > eo1-3_small.out;
